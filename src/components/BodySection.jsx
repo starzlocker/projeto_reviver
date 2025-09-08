@@ -2,7 +2,8 @@ import './BodySection.css'
 import Spacer from './Spacer'
 import ReviewSlider from './naosei';
 import VideoCarousel from './VideoSection'
-
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+import { useState} from 'react';
 // Componente Principal que une todas as seções
 const BodySection = () => {
   return (
@@ -13,6 +14,10 @@ const BodySection = () => {
       <NewCycleSection />
       <ReviverSection />
       <DemoReviews />
+      <About />
+      <Pricing />
+      <FAQ />
+      <SubscribeForm />
     </div>
   );
 };
@@ -61,7 +66,7 @@ const NewCycleSection = () => {
       </div>
       <div className="feeling-section">
           <div className="feeling-image">
-            <img src="/media/pexels-mart-production-7277896.jpg" alt="Mulher pensativa" />
+            <img src="./media/pexels-mart-production-7277896.jpg" alt="Mulher pensativa" />
           </div>
           <div className="feeling-text">
             <ul>
@@ -89,15 +94,115 @@ const ReviverSection = () => {
         <p className="text-[#159ade] mb-2">E é por isso que juntos vamos montar o seu:</p>
         <h3 className="text-[#159ade] mb-8 font-bold text-xl">Manual de Funcionamento</h3>
       </div>
-      <div className="manual-steps">
-        <ManualStep number="1" title="Identidade Verdadeira" description="Compreendendo o ser essencial, livre de rótulos." />
-        <ManualStep number="2" title="Olhar honesto para a sua História" description="Resignificar o passado: onde você esteve e escrever o PRESENTE para desenhar o seu futuro." />
-        <ManualStep number="3" title="Armadilhas Emocionais" description="Identificando o que te paralisa, te impede e como podemos ressignificá-los." />
-        <ManualStep number="4" title="As Forças de Caráter" description="Conhecendo suas maiores forças internas e utilizá-las para andar na direção da vida que você merece ter." />
-      </div>
+      <ManualSteps />
+      {/* <div id="manual_steps_container">
+      
+        <FaChevronLeft fontSize="18px" className="chevron"/>
+        <div className="manual-steps">
+          <ManualStep number="1" title="Identidade Verdadeira" description="Compreendendo o ser essencial, livre de rótulos." />
+          <ManualStep number="2" title="Olhar honesto para a sua História" description="Resignificar o passado: onde você esteve e escrever o PRESENTE para desenhar o seu futuro." />
+          <ManualStep number="3" title="Armadilhas Emocionais" description="Identificando o que te paralisa, te impede e como podemos ressignificá-los." />
+          <ManualStep number="4" title="As Forças de Caráter" description="Conhecendo suas maiores forças internas e utilizá-las para andar na direção da vida que você merece ter." />
+          <ManualStep number="5" title="A Vivianne é muito incoveniente." description="E ELA ME TRATA MAL" />
+        </div>
+        <FaChevronRight fontSize="18px" className="chevron"/>
+      </div> */}
     </div>
   );
 };
+
+
+const ManualSteps = () => {
+  const [leftBound, setLeftBound] = useState(0);
+
+  const data = [
+    {
+      number: "1",
+      title: "Identidade Verdadeira",
+      description: "Compreendendo o ser essencial, livre de rótulos.",
+    },
+    {
+      number: "2",
+      title: "Olhar honesto para a sua História",
+      description: "Resignificar o passado: onde você esteve e escrever o PRESENTE para desenhar o seu futuro.",
+    },
+    {
+      number: "3",
+      title: "Armadilhas Emocionais",
+      description: "Identificando o que te paralisa, te impede e como podemos ressignificá-los.",
+    },
+    {
+      number: "4",
+      title: "As Forças de Caráter",
+      description: "Conhecendo suas maiores forças internas e utilizá-las para andar na direção da vida que você merece ter.",
+    },
+    {
+      number: "5",
+      title: "Propósito e Direção",
+      description: "Descobrindo seu verdadeiro propósito e traçando um caminho claro para o futuro.",
+    },
+  ]
+  
+  const ManualStep = ({
+    number,
+    title,
+    description
+  }) => {
+    return (
+    <div className="manual-step">
+      <div className="step-number">{number}</div>
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+    )
+  };
+
+  const moveRight = () => {
+    if (leftBound < data.length - 3) { // -3 porque mostramos 3 items por vez
+      setLeftBound(n => n + 1);
+    }
+  }
+
+  const moveLeft = () => {
+    if (leftBound > 0) {
+      setLeftBound(n => n - 1);
+    }
+  }
+
+  return (
+      <div id="manual_steps_container">
+        <FaChevronLeft 
+          fontSize="18px" 
+          className={`chevron ${leftBound === 0 ? 'disabled' : ''}`} 
+          onClick={moveLeft}
+        />
+        <div className="manual-steps-wrapper">
+          <div 
+            className="manual-steps"
+            style={{
+              transform: `translateX(-${leftBound * 240}px)` // 200px width + 20px gap
+            }}
+          >
+            {
+              data.map((item) => (
+                <ManualStep
+                  key={item.number}
+                  title={item.title}
+                  number={item.number}
+                  description={item.description}
+                />
+              ))
+            }
+          </div>
+        </div>
+        <FaChevronRight 
+          fontSize="18px" 
+          className={`chevron ${leftBound >= data.length - 3 ? 'disabled' : ''}`} 
+          onClick={moveRight}
+        />
+      </div>
+  )
+}
 
 // --- Componente Reutilizável ---
 
@@ -110,6 +215,7 @@ const ManualStep = ({ number, title, description }) => {
     </div>
   );
 };
+
 
 const DemoReviews = () => {
   const demo = [
@@ -175,3 +281,206 @@ const DemoReviews = () => {
 };
 
 export default BodySection;
+
+
+const About = () => {
+  return (
+    <div className="about-section">
+      <h2 className="section-title">QUEM VAI TE GUIAR NESSA TRANSFORMAÇÃO</h2>
+      <div className="about-content">
+        <div className="about-img-container">
+          <img src="./media/pexels-mart-production-7277896.jpg" alt="Equipe Movimento Reviver" />
+        </div>
+        <div className="about-text">
+          <div className="about-person">
+            <h3>Amanda Zanutim</h3>
+            <p>
+              Psicóloga, idealizadora do Movimento Reviver e especialista em transformar vidas através do autoconhecimento e da cura emocional. Sua experiência pessoal e profissional a tornam a guia perfeita para sua jornada de transformação pessoal.
+            </p>
+          </div>
+          
+          <div className="about-person">
+            <h3>Mariangela de Paula</h3>
+            <p>
+              Psicóloga, Master Coach e Pastora, com vasta experiência em processos de desenvolvimento pessoal e liderança. Sua paixão é ajudar você a alcançar seu potencial máximo através da psicologia positiva e da resiliência.
+            </p>
+          </div>
+          
+          <p className="about-team">
+            Contamos também com uma equipe multidisciplinar. Psicólogas e Empreendedoras que decidiram vivenciar o Movimento Reviver no seu dia a dia e assumiram levar nosso propósito para outras pessoas. Juntas, elas criaram uma imersão transformadora, onde você vai entender seu funcionamento e viver sua história de forma autêntica, com foco no corpo, alma e espírito.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Pricing = () => {
+  const fullPrice = "497,00";
+  const discountPrice = "297,00";
+  
+  return (
+    <div className="pricing-section">
+      <h2 className="section-title text-white">O que você recebe com o REVIVER?</h2>
+      <div className="pricing-inner-container">
+          <div className="pricing-benefits">
+            <div className="benefit-item">
+              <h3>Teste Exclusivo + Ferramentas</h3>
+              <p>Desvende seu funcionamento com nosso teste e ferramentas práticas.</p>
+            </div>
+            <div className="benefit-item">
+              <h3>Material de Autodesenvolvimento</h3>
+              <p>Continue sua jornada com nosso material exclusivo pós-imersão.</p>
+            </div>
+            <div className="benefit-item">
+              <h3>Brindes Personalizados</h3>
+              <p>Celebre sua transformação com nossos mimos personalizados.</p>
+            </div>
+          </div>
+          
+          <div className="pricing-card">
+            <p className="pricing-intro">Só falta um passo para <span className="highlight">transformar a sua vida</span></p>
+            <div className="price-container">
+              <p className="old-price">De R$ {fullPrice}</p>
+              <p className="new-price">Por R$ {discountPrice}</p>
+              <p className="payment-info">Parcelamos no cartão de crédito</p>
+            </div>
+            <button className="cta-button">ADQUIRIR MEU LUGAR</button>
+          </div>
+        </div>
+      </div>
+  );
+};
+
+const FAQ = () => {
+  const [openItem, setOpenItem] = useState(null);
+  
+  const data = [
+    {
+      "question": "Qual a data, local e horário da 7ª Imersão?",
+      "answer": "A 7ª Imersão será realizada no dia 15 de Novembro, das 08:30 às 18:30."
+    },
+    {
+      "question": "Qual a idade mínima para participar?",
+      "answer": "A imersão é aberta para pessoas a partir de 18 anos."
+    },
+    {
+      "question": "A imersão é exclusiva para mulheres?",
+      "answer": "Não! A 6ª Imersão é para homens e mulheres, e casais são muito bem-vindos."
+    },
+    {
+      "question": "A equipe do Movimento Reviver é formada apenas por psicólogas?",
+      "answer": "Não. Temos uma equipe multidisciplinar, com profissionais de diversas áreas. Nossa abordagem é integral, considerando o ser humano em suas dimensões biológica, psicológica e espiritual."
+    },
+    {
+      "question": "Já faço terapia, a imersão pode atrapalhar meu processo?",
+      "answer": "De forma alguma. Nossa abordagem é disruptiva e autêntica, e não concorre com seu processo terapêutico. Pelo contrário, ela vai agregar e complementar sua jornada de autoconhecimento."
+    },
+    {
+      "question": "O que é o Manual de Funcionamento?",
+      "answer": "O Manual de Funcionamento é uma ferramenta personalizada de autoconhecimento, que te ajuda a entender como você opera em suas dimensões biológica, psicológica e espiritual."
+    }
+  ];
+
+  const toggleItem = (index) => {
+    setOpenItem(openItem === index ? null : index);
+  };
+
+  return (
+    <div className="faq-section">
+      <h2 className="section-title">Perguntas Frequentes</h2>
+      <div className="faq-container">
+        {data.map((item, index) => (
+          <div key={index} className="faq-item">
+            <div 
+              className={`faq-question ${openItem === index ? 'active' : ''}`}
+              onClick={() => toggleItem(index)}
+            >
+              <span>{item.question}</span>
+              <span className="faq-icon">{openItem === index ? '−' : '+'}</span>
+            </div>
+            {openItem === index && (
+              <div className="faq-answer">
+                {item.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const SubscribeForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+  
+  const fullPrice = "497,00";
+  const discountPrice = "297,00";
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Aqui você pode implementar a lógica de envio do formulário
+  };
+
+  return (
+    <div className="subscribe-section">
+      <h2 className="section-title text-white">Garanta sua Transformação</h2>
+      <form className="subscribe-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Seu nome completo"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Seu melhor e-mail"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <input 
+            type="tel" 
+            name="phone" 
+            placeholder="Seu WhatsApp"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        
+        <div className="form-footer">
+          <button type="submit" className="cta-button">
+            ADQUIRIR MEU LUGAR
+          </button>
+          <div className="price-info">
+            <p className="old-price">De R$ {fullPrice}</p>
+            <p className="new-price">Por R$ {discountPrice}</p>
+            <p className="payment-info">Parcelamos no cartão de crédito</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};

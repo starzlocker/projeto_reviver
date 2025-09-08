@@ -9,11 +9,11 @@ import RotatingEarth from "./RotatingEarth";
         return (
             <section className="lp_header_mobile block sm:hidden">
                 <video className="lp_video" autoPlay loop muted playsInline>
-                    <source src="/media/lp_video.mp4" type="video/mp4" />
+                    <source src="./media/lp_video.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeo em HTML5.
                 </video>
                 <div className="lp_video_mask"></div>
-                <div className="lp_header_content w-full max-w-screen-lg justify-self-center">
+                <div className="lp_header_content">
                     <div className="lp_title w-full">
                         <div className="flex flex-row items-center justify-between">
                             <h1 className="title_text text-white font-bold text-3xl">{title}</h1>
@@ -33,7 +33,7 @@ import RotatingEarth from "./RotatingEarth";
         return (
             <section className="lp_header_mobile hidden sm:block">
                 <video className="lp_video" autoPlay loop muted playsInline>
-                    <source src="/media/lp_video.mp4" type="video/mp4" />
+                    <source src="./media/lp_video.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeo em HTML5.
                 </video>
                 
