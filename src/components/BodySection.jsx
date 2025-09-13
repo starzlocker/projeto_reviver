@@ -4,6 +4,7 @@ import ReviewSlider from './naosei';
 import VideoCarousel from './VideoSection'
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import { useState} from 'react';
+import { LuMessageCircleMore } from "react-icons/lu";
 // Componente Principal que une todas as seções
 const BodySection = () => {
   return (
@@ -113,8 +114,11 @@ const ReviverSection = () => {
 
 
 const ManualSteps = () => {
-  const [leftBound, setLeftBound] = useState(0);
+  const [curOffset, setCurOffset] = useState(0)
 
+  const stepWidth = 200;
+  const gap = 6;
+  const stepLength = stepWidth + (gap*2);
   const data = [
     {
       number: "1",
@@ -142,14 +146,17 @@ const ManualSteps = () => {
       description: "Descobrindo seu verdadeiro propósito e traçando um caminho claro para o futuro.",
     },
   ]
-  
+
+
   const ManualStep = ({
     number,
     title,
-    description
+    description,
+    width,
+    margin
   }) => {
     return (
-    <div className="manual-step">
+    <div className="manual-step" style={{width: `${width}px`, margin: `0 ${gap}px`}}>
       <div className="step-number">{number}</div>
       <h4>{title}</h4>
       <p>{description}</p>
@@ -157,15 +164,31 @@ const ManualSteps = () => {
     )
   };
 
+  // Pega o offsetLeft do próximo cartão que não aparece e seta ele como próxima parada
+
   const moveRight = () => {
-    if (leftBound < data.length - 3) { // -3 porque mostramos 3 items por vez
-      setLeftBound(n => n + 1);
+    const manualStepsWrapper = document.querySelector(".manual-steps-wrapper");
+    const manualStepsElement = document.querySelector(".manual-steps");
+    const manualSteps = document.querySelectorAll(".manual-step");
+
+    const stepW = manualSteps[0].clientWidth + (gap*2);
+    const wrapperW = manualStepsWrapper.clientWidth;
+    const containerW = manualStepsElement.clientWidth;
+    const curOffsetSize = curOffset * stepLength;
+
+
+    if (curOffsetSize + wrapperW < (containerW + stepLength)) {
+      setCurOffset(n => n + 1);
     }
   }
 
+
   const moveLeft = () => {
-    if (leftBound > 0) {
-      setLeftBound(n => n - 1);
+    const chevronRight = document.querySelector("#manual_steps_container .chevron-r");
+    chevronRight.classList.remove("disabled")
+    const curOffsetSize = curOffset * stepLength;
+    if (curOffsetSize > 0) {
+      setCurOffset(n => n - 1);
     }
   }
 
@@ -173,14 +196,14 @@ const ManualSteps = () => {
       <div id="manual_steps_container">
         <FaChevronLeft 
           fontSize="18px" 
-          className={`chevron ${leftBound === 0 ? 'disabled' : ''}`} 
+          className={`chevron chevron-l ${curOffset === 0 ? 'disabled' : ''}`} 
           onClick={moveLeft}
         />
         <div className="manual-steps-wrapper">
           <div 
             className="manual-steps"
             style={{
-              transform: `translateX(-${leftBound * 240}px)` // 200px width + 20px gap
+              width: `${(stepWidth + gap) * data.length}px`
             }}
           >
             {
@@ -190,6 +213,8 @@ const ManualSteps = () => {
                   title={item.title}
                   number={item.number}
                   description={item.description}
+                  width={stepWidth}
+                  margin={gap}
                 />
               ))
             }
@@ -197,7 +222,7 @@ const ManualSteps = () => {
         </div>
         <FaChevronRight 
           fontSize="18px" 
-          className={`chevron ${leftBound >= data.length - 3 ? 'disabled' : ''}`} 
+          className={`chevron chevron-r `} 
           onClick={moveRight}
         />
       </div>
