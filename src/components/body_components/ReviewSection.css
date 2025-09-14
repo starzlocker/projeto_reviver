@@ -1,0 +1,13 @@
+/*
+======================================= 
+Review Section 
+=======================================
+*/
+.comment-section {
+  text-align: center;
+  background-color: #ffffff; /* Fundo branco para se integrar */
+}
+
+.comment-section h3 {
+  color: var(--primary-color);
+}

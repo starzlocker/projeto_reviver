@@ -1,0 +1,102 @@
+/*
+=======================================
+ Intro Section 
+ =======================================
+ */
+.genesis-header {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.genesis-header p {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.genesis-header h1 {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  font-weight: 800;
+  margin-top: -8px;
+}
+.video-section {
+  padding: 0 40px;
+}
+
+.video_container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+}
+.video-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.share-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-button {
+  width: 70px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.play-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-left: 15px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.watch-youtube-button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.description-text {
+  margin: 30px 40px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
