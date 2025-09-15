@@ -4,7 +4,7 @@ const IdentificationSection = () => {
   return (
     <section className="new-cycle-wrapper">
       <div className="new-cycle-header">
-        <img src="./media/novo_ciclo_banner.png"></img>
+        <img src="/media/novo_ciclo_banner.png" alt="Banner Novo Ciclo" />
       </div>
       <div className="feeling-section-out-text">
         <h3>VOCÊ JÁ SENTIU QUE...</h3>
