@@ -127,7 +127,7 @@ const SubscribeFormSection = ({fullPrice, discountPrice}) => {
               required
             />
             <span>
-              Li e concordo com os <Link to="/projeto_reviver/termos" className="underline text-blue-400">Termos de Uso</Link> e a <a href="/privacidade" className="underline text-blue-400">Política de Privacidade</a>.
+              Li e concordo com os <Link to="/termos" className="underline text-blue-400">Termos de Uso</Link> e a <a href="/privacidade" className="underline text-blue-400">Política de Privacidade</a>.
             </span>
           </label>
         </div>

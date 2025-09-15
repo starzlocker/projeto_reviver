@@ -27,7 +27,7 @@ const BodySection = () => {
       <SubscribeFormSection fullPrice={fullPrice} discountPrice={discountPrice}/>
       <FooterSection />
       <p>
-        <Link to="/projeto_reviver/termos" className="link-to">
+        <Link to="/termos" className="link-to">
           Termos de Uso e Política de Privacidade
         </Link>
       </p>

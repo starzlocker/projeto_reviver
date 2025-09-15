@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import HeaderSection from './components/HeaderSection'
 import BodySection from './components/BodySection'
 import Termos from './components/Termos' // novo componente que você vai criar
@@ -10,7 +10,7 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route
-            path="/projeto_reviver/home"
+            path="/"
             element={
               <div className="page-content">
                 <HeaderSection />
@@ -18,7 +18,7 @@ function App() {
               </div>
             }
           />
-          <Route path="/projeto_reviver/termos" element={<Termos />} />
+          <Route path="/termos" element={<Termos />} />
         </Routes>
       </div>
     </Router>

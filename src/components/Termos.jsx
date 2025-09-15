@@ -9,7 +9,7 @@ const Termos = () => {
     <PoliticaPrivacidade />
     <FooterSection />
       <p className="link-to">
-        <Link to="/projeto_reviver/home" className="link-to">
+        <Link to="/" className="link-to">
           Home
         </Link>
       </p>
