@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import "./SubscribeFormSection.css";
-
+import { Link } from 'react-router-dom'
 const SubscribeFormSection = ({fullPrice, discountPrice}) => {
   const [formData, setFormData] = useState({
     nome: '',
@@ -118,7 +118,19 @@ const SubscribeFormSection = ({fullPrice, discountPrice}) => {
             required
           />
         </div>
-        
+        <div className="form-group">
+          <label className="check_field">
+            <input
+              type="checkbox"
+              name="consentimento"
+              onChange={handleInputChange}
+              required
+            />
+            <span>
+              Li e concordo com os <Link to="/projeto_reviver/termos" className="underline text-blue-400">Termos de Uso</Link> e a <a href="/privacidade" className="underline text-blue-400">Política de Privacidade</a>.
+            </span>
+          </label>
+        </div>
         <div className="form-footer">
             {
                 cadastrando ?

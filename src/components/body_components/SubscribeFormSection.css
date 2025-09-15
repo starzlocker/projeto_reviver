@@ -81,3 +81,16 @@ Subscribe Form Section
   transform: none;
   box-shadow: none;
 }
+
+.check_field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.check_field input {
+  width: auto;
+  margin: 0;
+  transform: scale(1.5);
+}

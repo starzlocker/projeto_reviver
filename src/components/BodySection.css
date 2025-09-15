@@ -51,3 +51,9 @@ body {
   overflow: hidden; /* Garante que os filhos com margem negativa não transbordem */
 }
 
+.link-to  {
+  color: #159ade;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+}
