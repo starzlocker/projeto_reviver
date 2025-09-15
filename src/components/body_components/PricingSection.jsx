@@ -1,6 +1,12 @@
 import "./PricingSection.css"
 
 const PricingSection = ({ fullPrice, discountPrice }) => {
+  const scrollToSubscribe = () => {
+    const element = document.getElementById('subscribe_section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <section className="pricing-section">
@@ -28,7 +34,7 @@ const PricingSection = ({ fullPrice, discountPrice }) => {
               <p className="new-price">Por R$ {discountPrice.toFixed(2)}</p>
               <p className="payment-info">Parcelamos no cartão de crédito</p>
             </div>
-            <a href="#subscribe_button"><button className="cta-button" >ADQUIRIR MEU LUGAR</button></a>
+            <button className="cta-button" onClick={scrollToSubscribe}>ADQUIRIR MEU LUGAR</button>
           </div>
         </div>
       </section>

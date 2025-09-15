@@ -75,7 +75,7 @@ const SubscribeFormSection = ({fullPrice, discountPrice}) => {
   };
 
   return (
-    <section className="subscribe-section">
+    <section className="subscribe-section" id="subscribe_section">
       <h2 className="section-title text-white">Garanta sua Transformação</h2>
       <form className="subscribe-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -131,14 +131,14 @@ const SubscribeFormSection = ({fullPrice, discountPrice}) => {
             </span>
           </label>
         </div>
-        <div className="form-footer">
+        <div className="form-footer" id="subscribe_button">
             {
                 cadastrando ?
-                    <button type="submit" className="cta-button disabled" id="subscribe_button">
+                    <button type="submit" className="cta-button disabled">
                         ADQUIRIR MEU LUGAR
                     </button>
                     :
-                    <button type="submit" className="cta-button" id="subscribe_button">
+                    <button type="submit" className="cta-button">
                         ADQUIRIR MEU LUGAR
                     </button>
             }
