@@ -6,6 +6,7 @@ Review Section
 .comment-section {
   text-align: center;
   background-color: #ffffff; /* Fundo branco para se integrar */
+  padding: 20px 40px 20px;
 }
 
 .comment-section h3 {

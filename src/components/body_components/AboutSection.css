@@ -1,0 +1,86 @@
+/*
+=======================================
+ About Section 
+=======================================
+*/
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }     
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.about-img-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 40%;
+  max-width: 400px;
+}
+
+.about-img-container img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .about-img-container {
+    clip-path: circle();
+  }
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-person {
+  margin-bottom: 30px;
+}
+
+.about-person h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.about-person p, .about-team {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}

@@ -4,8 +4,7 @@ const IdentificationSection = () => {
   return (
     <section className="new-cycle-wrapper">
       <div className="new-cycle-header">
-        <h2>IMAGEM<br/>DO CASULO DA BORBOLETA</h2>
-        <h2>NOVO<br/>CICLO</h2>
+        <img src="./media/novo_ciclo_banner.png"></img>
       </div>
       <div className="feeling-section-out-text">
         <h3>VOCÊ JÁ SENTIU QUE...</h3>
@@ -23,6 +22,11 @@ const IdentificationSection = () => {
               <li>Sabem que poderiam viver diferente, mas não sabem por onde começar.</li>
             </ul>
         </div>
+      </div>
+      <div className="reviver-callout">
+        <p>No REVIVER, nós caminhamos juntos nesse processo.</p>
+        <p>Quando você entende como funciona, suas escolhas se tornam leves e conscientes.</p>
+        <p>É assim que você se torna protagonista da sua vida.</p>
       </div>
     </section>
   );

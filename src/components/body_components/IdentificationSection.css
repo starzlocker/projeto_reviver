@@ -3,29 +3,6 @@
 Identification Section 
 =======================================
 */
-.new-cycle-wrapper {
-  color: #eefffd;
-}
-
-.new-cycle-wrapper h3 {
-  margin: 0;
-}
-
-.new-cycle-header {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  padding: 30px;
-  background-color: var(--primary-color);
-}
-
-.new-cycle-header h2 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
 .feeling-section {
   display: flex;
   align-items: flex-start;
@@ -39,7 +16,47 @@ Identification Section
   margin-top: 20px;
   justify-self: center;
   width: 90%;
+  height: 450px;
 }
+
+
+@media (max-width: 480px) {
+  .feeling-section {
+    padding: 10px;
+  }
+}
+.new-cycle-wrapper {
+  color: #eefffd;
+  height: 900px;
+}
+
+@media (max-width: 768px) {
+  .new-cycle-wrapper {
+    height: auto;
+  }
+}
+
+.new-cycle-wrapper h3 {
+  margin: 0;
+}
+
+.new-cycle-header {
+  display: flex;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 200px;
+  background-image: url("./media/novo_ciclo_banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.new-cycle-header img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
 
 .feeling-section-out-text {
   display: flex;
@@ -58,6 +75,7 @@ Identification Section
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: auto;
   }
 }
 
@@ -67,7 +85,7 @@ Identification Section
   align-items: center;
   position: relative;
   width: 400px;
-  top: -80px;
+  top: -50px;
   clip-path: circle();
   aspect-ratio: 1/1;
   background-color: rgb(255, 255, 255);
@@ -117,4 +135,29 @@ Identification Section
   left: 0;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.reviver-callout {
+  position: relative;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 50px;
+  border-radius: 15px;
+  margin: auto;
+  width: 70%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  top: -100px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .reviver-callout {
+    width: 70%;
+    padding: 30px;
+    top: -20px;
+    font-size: 1rem;
+  }
 }

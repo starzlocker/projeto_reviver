@@ -59,7 +59,7 @@ const ReviewSection = () => {
   return (
     <section className="comment-section">
       <h3>O QUE AS PESSOAS ESTÃO DIZENDO...</h3>
-      <ReviewSlider items={demo} />
+      {/* <ReviewSlider items={demo} /> */}
       <VideoCarousel items={items}/>
     </section>
   );

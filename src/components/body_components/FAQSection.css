@@ -1,0 +1,78 @@
+/*
+======================================= 
+FAQ Section 
+=======================================
+*/
+.faq-section 
+{
+  padding: 40px;
+  background-color: var(--background-color);
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 20px 0px;
+  }
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+.faq-item {
+  border-radius: 0px;
+}
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.faq-question:hover {
+  background-color: var(--background-color);
+}
+
+.faq-question.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.faq-question.active .faq-icon {
+  color: white;
+}
+
+.faq-answer {
+  padding: 20px;
+  background-color: var(--background-color);
+  border-top: 1px solid #e9ecef;
+  color: #555;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

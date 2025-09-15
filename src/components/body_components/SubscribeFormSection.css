@@ -1,0 +1,83 @@
+/*
+======================================= 
+Subscribe Form Section 
+=======================================
+*/
+.subscribe-section {
+  padding: 40px;
+  background: linear-gradient(135deg, #159ade, #127fb6);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .subscribe-section {
+    padding: 20px;
+  }     
+}
+
+.subscribe-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cta-button {
+  background-color: #39b54a;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.price-info .old-price,
+.price-info .new-price,
+.price-info .payment-info {
+  margin: 5px 0;
+  color: white;
+}
+
+
+.text-white {
+  color: white;
+}
+
+.cta-button.disabled, .cta-button.disabled:hover {
+  background-color: grey;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
