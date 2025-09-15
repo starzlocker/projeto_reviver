@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/projeto_reviver/', // Nome do seu repositório
+  base: '/', // Nome do seu repositório
   plugins: [
     react(),
     tailwindcss()
