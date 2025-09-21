@@ -46,6 +46,12 @@ Subscribe Form Section
 }
 
 .cta-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  justify-self: center;
   background-color: #39b54a;
   color: white;
   border: none;
@@ -56,6 +62,7 @@ Subscribe Form Section
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   margin-bottom: 20px;
+  width: 290px;
 }
 
 .cta-button:hover {
