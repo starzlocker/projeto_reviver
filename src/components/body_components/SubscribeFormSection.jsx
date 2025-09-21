@@ -79,10 +79,10 @@ Obrigado(a)! 🙏`
     const data = await response.json();
 
     if (data.errors) {
+      setCadastrando(false);
         alert(
             `Não foi possível realizar o cadastro: \n• ${data.errors.join("\n")}`
         )
-        setCadastrando(false);
         return;
     }
 
