@@ -1,5 +1,5 @@
 import './App.css'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HeaderSection from './components/HeaderSection'
 import BodySection from './components/BodySection'
 import Termos from './components/Termos' // novo componente que você vai criar
