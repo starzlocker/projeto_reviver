@@ -4,4 +4,6 @@ deployment:
     - export DEPLOYPATH=/home1/vivi4823/public_html/
     - npm ci
     - npm run build
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - /bin/cp -R dist/assets $DEPLOYPATH
+    - /bin/cp -R dist/media $DEPLOYPATH
+    - /bin/cp dist/index.html $DEPLOYPATH
