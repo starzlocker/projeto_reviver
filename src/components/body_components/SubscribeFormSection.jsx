@@ -55,7 +55,8 @@ Obrigado(a)! 🙏`
     );
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappRedirect = `https://whatsa.me/55971697154/?t=${encodedMessage}`
+    // const whatsappRedirect = `https://whatsa.me/19971697154/?t=${encodedMessage}`
+    const whatsappRedirect = `https://whatsa.me/19996256432/?t=${encodedMessage}`
     window.open(whatsappRedirect, '_blank')
 
 
