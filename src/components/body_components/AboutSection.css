@@ -13,8 +13,6 @@
   background-color: var(--background-color);
 }
 
-
-
 .section-title {
     font-size: 2rem;
     color: var(--primary-color);
@@ -50,7 +48,7 @@
 .about-img-container {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-self: top;
   width: 40%;
   max-width: 400px;
 }
@@ -68,6 +66,7 @@
 
 .about-text {
   flex: 2;
+  text-align: justify;
 }
 
 .about-person {

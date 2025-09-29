@@ -15,8 +15,7 @@ const IntroSection = () => {
       </div>
       <div className="description-text">
         <p>
-          Assim como o mundo foi criado em 7 DIAS, os participantes irão usar.<br />
-          A ENERGIA DO 7 para criar a fundação do seu novo "eu" e do seu novo ano!
+          O 7 nos lembra da criação e da completude. Agora, é tempo de você REVIVER e lançar as bases de um eu renovado, cheio de fé, esperança e entendimento.
         </p>
       </div>
     </section>

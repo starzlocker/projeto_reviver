@@ -12,19 +12,25 @@ const AboutSection = () => {
           <div className="about-person">
             <h3>Amanda Zanutim</h3>
             <p>
-              Psicóloga, idealizadora do Movimento REVIVER e especialista em transformar vidas através do autoconhecimento e da cura emocional. Sua experiência pessoal e profissional a tornam a guia perfeita para sua jornada de transformação pessoal.
+              Cristã, mãe da Gabriela, psicóloga, palestrante e escritora, apaixonada por gente e pelo poder da transformação.
+            </p>
+            <p>
+              Ao longo da minha trajetória, encontrei no autoconhecimento, na fé e na cura emocional o caminho para ressignificar minha própria história. Com MBA Executivo em Gestão Empresarial e formação em Psicologia Positiva, Logoterapia e Terapia dos Esquemas, fundei a AZ Desenvolvimento Humano e o Movimento REVIVER. Minha missão é inspirar pessoas a reencontrarem seu equilíbrio, seu bem-estar e sua força interior, respeitando a beleza única de cada ser humano em suas dimensões biológica, psicológica e espiritual.
             </p>
           </div>
           
           <div className="about-person">
             <h3>Mariangela de Paula</h3>
             <p>
-              Psicóloga, Master Coach e Pastora, com vasta experiência em processos de desenvolvimento pessoal e liderança. Sua paixão é ajudar você a alcançar seu potencial máximo através da psicologia positiva e da resiliência.
+              Cristã, casada com Anderson e mãe da Marina e Marianna, psicóloga, palestrante e escritora. Amo pessoas e seu potencial de superação.
+            </p>
+            <p>
+              Minha maior transformação aconteceu quando conheci a Deus. Com Ele voltei a sonhar e acreditar que poderia me superar. Pós-graduada em Psicologia Positiva, Master Coach, Especialização em Logoterapia, Gestão de Pessoas em Resiliência e idealizadora do Movimento Mulheres Fortes! Seminarista formada pelo Instituto Teológico Carisma em Alphaville. Encontrei na Amanda uma grande parceira; e no Movimento REVIVER os princípios que acredito. Meu propósito é ser um instrumento de edificação do corpo, alma e espírito humano, com saúde mental e resiliência.
             </p>
           </div>
           
           <p className="about-team">
-            Contamos também com uma equipe multidisciplinar. Psicólogas e Empreendedoras que decidiram vivenciar o Movimento REVIVER no seu dia a dia e assumiram levar nosso propósito para outras pessoas. Juntas, elas criaram uma imersão transformadora, onde você vai entender seu funcionamento e viver sua história de forma autêntica, com foco no corpo, alma e espírito.
+              Contamos também com uma equipe formada por outras psicólogas e por pessoas que já participaram de edições anteriores do Movimento REVIVER. Elas acreditam no propósito e hoje caminham conosco como <strong>REVIVENTES</strong>, compartilhando suas experiências e multiplicando a transformação. Juntos, acreditamos na força de viver a vida de forma autêntica, integrando corpo, alma e espírito.
           </p>
         </div>
       </div>

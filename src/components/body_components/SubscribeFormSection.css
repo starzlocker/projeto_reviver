@@ -50,6 +50,7 @@ Subscribe Form Section
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: auto;
   gap: 8px;
   justify-self: center;
   background-color: #39b54a;

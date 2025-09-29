@@ -7,7 +7,7 @@ const FAQSection = () => {
   const data = [
     {
       "question": "Qual a data, local e horário da 7ª Imersão?",
-      "answer": "A 7ª Imersão será realizada no dia 15 de Novembro, das 08:30 às 18:30."
+      "answer": "A 7ª Imersão será realizada no Hotel Ramada, em Campinas, no dia 15 de Novembro, das 08:30 às 18:30."
     },
     {
       "question": "Qual a idade mínima para participar?",
@@ -19,7 +19,7 @@ const FAQSection = () => {
     },
     {
       "question": "A equipe do Movimento REVIVER é formada apenas por psicólogas?",
-      "answer": "Não. Temos uma equipe multidisciplinar, com profissionais de diversas áreas. Nossa abordagem é integral, considerando o ser humano em suas dimensões biológica, psicológica e espiritual."
+      "answer": "Não. Temos uma equipe multidisciplinar, composta por profissionais de diversas áreas, mas a condução é realizada por psicólogos. Nossa abordagem é integral, considerando o ser humano em suas dimensões biológicas, psicológicas e espirituais."
     },
     {
       "question": "Já faço terapia, a imersão pode atrapalhar meu processo?",

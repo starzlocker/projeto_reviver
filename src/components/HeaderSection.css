@@ -99,7 +99,7 @@
 
 .title_desc {
     color: var(--background-color);
-    text-align: justify;
+    text-align: left;
 }
 
 @media (max-width: 480px) {

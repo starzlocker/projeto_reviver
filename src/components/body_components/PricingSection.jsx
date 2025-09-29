@@ -15,11 +15,11 @@ const PricingSection = ({ fullPrice, discountPrice }) => {
           <div className="pricing-benefits">
             <div className="benefit-item">
               <h3>Teste Exclusivo + Ferramentas</h3>
-              <p>Desvende seu funcionamento com nosso teste e ferramentas práticas.</p>
+              <p>Conheça e entenda seu funcionamento através dos testes de sua forças de caráter e Esquemas emocionais.</p>
             </div>
             <div className="benefit-item">
               <h3>Material de Autodesenvolvimento</h3>
-              <p>Continue sua jornada com nosso material exclusivo pós-imersão.</p>
+              <p>Receba um material completo de apoio para enriquecer seus estudos e impulsionar seu autodesenvolvimento.</p>
             </div>
             <div className="benefit-item">
               <h3>Brindes Personalizados</h3>

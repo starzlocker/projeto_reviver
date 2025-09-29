@@ -16,7 +16,7 @@ Identification Section
   margin-top: 20px;
   justify-self: center;
   width: 90%;
-  height: 450px;
+  height: 560px;
 }
 
 
@@ -27,7 +27,7 @@ Identification Section
 }
 .new-cycle-wrapper {
   color: #eefffd;
-  height: 900px;
+  height: 1000px;
 }
 
 @media (max-width: 768px) {

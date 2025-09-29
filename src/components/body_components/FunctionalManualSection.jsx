@@ -34,31 +34,31 @@ const ManualSteps = () => {
 		{
 			number: '1',
 			title: 'Identidade Verdadeira',
-			description: 'Compreendendo o ser essencial, livre de rótulos.',
+			description: 'Respeitando-se como um ser trino: Corpo + Alma + Espírito',
 		},
 		{
 			number: '2',
 			title: 'Olhar honesto para a sua História',
 			description:
-				'Resignificar o passado: onde você esteve e escrever o PRESENTE para desenhar o seu futuro.',
+				'Livrar-se de culpas, medos, exercitar o perdão',
 		},
 		{
 			number: '3',
 			title: 'Armadilhas Emocionais',
 			description:
-				'Identificando o que te paralisa, te impede e como podemos ressignificá-los.',
+				'Identificando o que te paralisa e te impede de viver o novo, repetindo ciclos',
 		},
 		{
 			number: '4',
 			title: 'As Forças de Caráter',
 			description:
-				'Conhecendo suas maiores forças internas e utilizá-las para andar na direção da vida que você merece ter.',
+				'Reconhecendo suas forças e como coloca-las em ação',
 		},
 		{
 			number: '5',
 			title: 'Propósito e Direção',
 			description:
-				'Descobrindo seu verdadeiro propósito e traçando um caminho claro para o futuro.',
+				'Descobrindo seu verdadeiro propósito e traçando um caminho claro para o futuro',
 		},
 	];
 
