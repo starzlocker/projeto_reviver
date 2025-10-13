@@ -53,6 +53,11 @@ const ReviewSection = () => {
       title: 'Teste2',
       embedUrl:"https://www.youtube.com/embed/mLWUhCjJfdA?si=-2w3w7zV9RVGuXYZ"
     },
+    {
+      id: 3,
+      title: 'Teste3',
+      embedUrl:"https://www.youtube.com/embed/HnibFgClWPo?si=aNavf7JT9bnZL-iE"
+    }
 
 ]
 
@@ -65,4 +70,4 @@ const ReviewSection = () => {
   );
 };
 
-export default ReviewSection
+export default ReviewSection  

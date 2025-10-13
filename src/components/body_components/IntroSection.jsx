@@ -11,7 +11,7 @@ const IntroSection = () => {
         <h1 className="genesis-title">NOVO CICLO</h1>
       </div>
       <div className="video-section">
-        <iframe className="video_container" src="https://www.youtube.com/embed/E2Du7bbZxFI?si=mSmAojKXHAz6hhbm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className="video_container" src="https://www.youtube.com/embed/ymkh2BlO-Uo?si=dknOnqXGsuUqArHN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div className="description-text">
         <p>
@@ -23,7 +23,3 @@ const IntroSection = () => {
 };
 
 export default IntroSection;
-
-/*
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E2Du7bbZxFI?si=mSmAojKXHAz6hhbm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-*/
